@@ -1,0 +1,45 @@
+@import "bootstrap";
+
+body {
+  background-image: url("http://i.stack.imgur.com/spmUM.gif");
+  // background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: "Nunito", sans-serif;
+}
+
+.flexchange {
+  justify-content: center;
+}
+
+.random {
+  color: red;
+}
+
+.card {
+  border-radius: 4px;
+  background: rgba($color: #fff, $alpha: 0.2);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6), 0 0 6px rgba(240, 20, 20, 0.5), 0 0 6px rgba(240, 20, 20, 0.5), 0 0 6px rgba(240, 20, 20, 0.5), 0 0 6px rgba(240, 20, 20, 0.5);
+  padding: 25px 30px 25px 30px;
+  cursor: pointer;
+  min-height: 380px;
+  border-radius: 30px;
+  max-width: 300px;
+}
+
+.mainwrapper {
+  min-height: calc(100vh - 54px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carddesign {
+  display: flex;
+  align-items: center;
+}
+
+p {
+  margin-top: 0.5rem;
+}
