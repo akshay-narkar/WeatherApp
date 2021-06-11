@@ -22,31 +22,38 @@
         <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item">
-              <span class="navbar-brand" aria-current="page" href="#">Open Weather</span>
+              <span class="navbar-brand" aria-current="page">Open Weather</span>
             </li>
             </li>
           </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button class="btn btn-outline-success" type="submit">Search</button>
+          <form class="d-flex" id= "formforweather">
+            <input class="form-control me-2" type="search" placeholder="Search" id="weatherdata" aria-label="Search" required />
+            <button type="submit" class="btn btn-outline-success" id= "submitweather" >Search</button>
           </form>
         </div>
       </div>
     </nav>
     <div class="container mainwrapper">
       <div class="card carddesign text-center">
-        <h3 class="my-3">UI Components</h3>
-        <div class="togglewrapper d-flex align-items-center my-3 py-1">
+        <h3 class="my-3" id="cityname">Enter the city name in the navbar</h3>
+        <h5 class="my-3" id="temperature"></h5>
+
+        <div class="togglewrapper d-flex align-items-center my-3 py-1 ">
           <h5>Celsius</h5>
           <div class="form-check form-switch px-3 m-0">
-            <input class="form-check-input m-0" type="checkbox" id="flexSwitchCheckDefault" />
+            <input class="form-check-input m-0" type="checkbox" id="flexSwitchCheckDefault" disabled>
           </div>
           <h5>Farenhite</h5>
         </div>
-        <p>Tabs, buttons</p>
-        <p>inputs, lists, cards</p>
-        <p>, and more! A comprehensive</p>
-        <p>library of mobile UI components, ready to go.</p>
+        
+                <p id="feelslike"></p>
+
+        <p id="firsttag"></p>
+        <p id="secondtag"></p>
+        <p id="thirdtag"></p>
+        <p id="fourthtag"></p>
+        <p id="fifthtag"></p>
+
       </div>
     </div>
   </body>
