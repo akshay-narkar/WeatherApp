@@ -1,7 +1,7 @@
 @import "bootstrap";
 
 body {
-  background-image: url("http://i.stack.imgur.com/spmUM.gif");
+  background-image: url("https://media.giphy.com/media/gk3s6G7AdUNkey0YpE/giphy.gif");
   // background-color: #fff;
   background-repeat: no-repeat;
   background-size: cover;
@@ -18,13 +18,13 @@ body {
 }
 
 .card {
-  background: rgba($color: #fff, $alpha: 0.2);
+  background-color: rgba($color: #fff, $alpha: 0.4);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6), 0 0 6px rgba(240, 20, 20, 0.5), 0 0 6px rgba(240, 20, 20, 0.5), 0 0 6px rgba(240, 20, 20, 0.5), 0 0 6px rgba(240, 20, 20, 0.5);
   padding: 25px 30px 25px 30px;
   cursor: pointer;
   min-height: 380px;
   border-radius: 30px;
-  max-width: 300px;
+  max-width: 270px;
 }
 
 .mainwrapper {
