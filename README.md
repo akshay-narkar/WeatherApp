@@ -1,8 +1,8 @@
-# Todo-Collab
+# Open Weather
 
 A simple web weather app that works with the open weather API, where the user can search the temperature by city and toggle by unit of measurement(Farenheit or Celsius)
 
-## Todolist screenshot
+## OpenWeather screenshot
 
 <!-- <img src="/src/screenshot.png" width="65%"/> -->
 
