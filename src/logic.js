@@ -25,6 +25,7 @@ async function findtemp(e = false, location) {
   } else {
     nodata('City not found');
   }
+  weatherdata.value = '';
 }
 
 export default function start() {
