@@ -28,7 +28,6 @@ function temperatureunit() {
 }
 
 function gifchange(change) {
-    console.log(change)
   switch (change) {
     case 'Thunderstorm':
       document.body.style.backgroundImage = "url('../src/gifs/thunderstorm.gif')";
@@ -64,7 +63,7 @@ export const displaydata = (json, jsonimage) => {
   toggle.disabled = false;
   cityname.textContent = `${json.name},${json.sys.country}`;
   main.textContent = json.weather[0].main;
- gifchange(json.weather[0].main);
+  gifchange(json.weather[0].main);
   desc.textContent = json.weather[0].description;
   if (toggle.checked) {
     temperature.textContent = `${json.main.temp}°F`;
