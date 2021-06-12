@@ -1,8 +1,7 @@
 import { nodata, displaydata, cityname } from './dom';
+import key from './key';
 
-const key = 'ee6f65e9ba3eb85072e21ce3e513cac0';
-// ee6f65e9ba3eb85072e21ce3e513cac0
-export const weatherdata = document.getElementById('weatherdata');
+const weatherdata = document.getElementById('weatherdata');
 let json1 = 0; // const random = "Akshay"; // important.. why doenst it show in console?
 
 async function findtemp(e = false, location) {
@@ -23,19 +22,17 @@ async function findtemp(e = false, location) {
     } else {
       nodata('City not found');
 
-      //   alert(`HTTP-Error: ${response.status}`);
     }
   } else {
     nodata('City not found');
 
-    // alert("HTTP-Error: " + response.status);
   }
 }
 
-export function start() {
+export default function start() {
   const submitweather = document.querySelector('#formforweather');
-  // const weatherdata = document.querySelector('#weatherdata');
-  // const random = "Akshay"; // important.. why doenst it show in console?
+  
 
   submitweather.addEventListener('submit', (e) => { findtemp(e, weatherdata.value); });
 }
+
