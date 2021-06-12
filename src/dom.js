@@ -1,3 +1,12 @@
+import clouds from './gifs/clouds1.gif';
+import drizzle from './gifs/drizzle.webp';
+import gif from './gifs/giphy.webp';
+import mist from './gifs/mist.gif';
+import rain from './gifs/rain.gif';
+import sunny from './gifs/sunny.webp';
+import thunder from './gifs/thunderstorm.gif';
+import snow from './gifs/snow.gif';
+
 export const cityname = document.getElementById('cityname');
 const temperature = document.getElementById('temperature');
 const main = document.getElementById('main');
@@ -11,6 +20,11 @@ const fourthtag = document.getElementById('fourthtag');
 const fifthtag = document.getElementById('fifthtag');
 
 const toggle = document.getElementById('flexSwitchCheckDefault');
+
+// let feels;
+// let temp;
+// let min;
+// let max;
 
 function temperatureunit() {
   if (toggle.checked) {
@@ -30,30 +44,30 @@ function temperatureunit() {
 function gifchange(change) {
   switch (change) {
     case 'Thunderstorm':
-      document.body.style.backgroundImage = "url('../src/gifs/thunderstorm.gif')";
+      document.body.style.backgroundImage = `url(${thunder})`;
       break;
     case 'Drizzle':
-      document.body.style.backgroundImage = "url('../src/gifs/drizzle.webp')";
+      document.body.style.backgroundImage = `url(${drizzle})`;
 
       break;
     case 'Rain':
-      document.body.style.backgroundImage = "url('../src/gifs/rain.gif')";
+      document.body.style.backgroundImage = `url(${rain})`;
 
       break;
     case 'Snow':
-      document.body.style.backgroundImage = "url('../src/gifs/snow.gif')";
+      document.body.style.backgroundImage = `url(${snow})`;
 
       break;
     case 'Clear':
-      document.body.style.backgroundImage = "url('../src/gifs/sunny.webp')";
+      document.body.style.backgroundImage = `url(${sunny})`;
 
       break;
     case 'Clouds':
-      document.body.style.backgroundImage = "url('../src/gifs/clouds1.gif')";
+      document.body.style.backgroundImage = `url(${clouds})`;
 
       break;
     default:
-      document.body.style.backgroundImage = "url('../src/gifs/mist.gif')";
+      document.body.style.backgroundImage = `url(${mist})`;
       break;
   }
 }
@@ -99,7 +113,7 @@ export const nodata = (message) => {
   fourthtag.textContent = '';
   fifthtag.textContent = '';
   img.setAttribute('src', '');
-  document.body.style.backgroundImage = "url('../src/gifs/giphy.webp')";
+  document.body.style.backgroundImage = `url(${gif})`;
 };
 
 toggle.addEventListener('click', temperatureunit);

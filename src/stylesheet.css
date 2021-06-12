@@ -1,8 +1,6 @@
-@import "bootstrap";
-
 body {
   background-image: url("./gifs/giphy.webp");
-  // background-color: #fff;
+  /* background-color: #fff; */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -18,7 +16,7 @@ body {
 }
 
 .card {
-  background-color: rgba($color: #fff, $alpha: 0.4);
+  background-color: rgba(255, 255, 255, 0.4);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6), 0 0 6px rgba(240, 20, 20, 0.5), 0 0 6px rgba(240, 20, 20, 0.5), 0 0 6px rgba(240, 20, 20, 0.5), 0 0 6px rgba(240, 20, 20, 0.5);
   padding: 25px 30px 25px 30px;
   cursor: pointer;
