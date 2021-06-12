@@ -21,18 +21,14 @@ async function findtemp(e = false, location) {
       displaydata(json1, jsonimage.url);
     } else {
       nodata('City not found');
-
     }
   } else {
     nodata('City not found');
-
   }
 }
 
 export default function start() {
   const submitweather = document.querySelector('#formforweather');
-  
 
   submitweather.addEventListener('submit', (e) => { findtemp(e, weatherdata.value); });
 }
-
