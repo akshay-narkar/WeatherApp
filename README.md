@@ -4,7 +4,7 @@ A simple web weather app that works with the open weather API, where the user ca
 
 ## OpenWeather screenshot
 
-<!-- <img src="/src/screenshot.png" width="65%"/> -->
+<img src="/src/screenshot.png" width="65%"/>
 
 In this project we build a Weather app with vanilla javascript & webpack where you can:
 
@@ -29,7 +29,9 @@ Get Api Key
 - Create an account if you dont have one
 - Copy your new Api Key
 - Go to src/logic.js
-- Paste your new Api Key were says 'API_KEY_HERE'
+- Create a new file with the name `key.js`
+- Paste the following code & replace `YOUR KEY` text with your api key
+  `const key = 'YOUR KEY'; export default key;`
 
 To set up a local copy of the project
 
