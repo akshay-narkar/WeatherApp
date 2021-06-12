@@ -1,7 +1,6 @@
 import { nodata, displaydata, cityname } from './dom';
-// import key from './key';
+import key from './key';
 
-const key = 'ee6f65e9ba3eb85072e21ce3e513cac0';
 const weatherdata = document.getElementById('weatherdata');
 let json1 = 0; // const random = "Akshay"; // important.. why doenst it show in console?
 
@@ -16,7 +15,7 @@ async function findtemp(e = false, location) {
   if (response.ok) {
     json1 = await response.json();
     const { icon } = json1.weather[0];
-    const iconurl = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+    const iconurl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
     const jsonimage = await fetch(iconurl);
     if (jsonimage.ok) {
       displaydata(json1, jsonimage.url);
