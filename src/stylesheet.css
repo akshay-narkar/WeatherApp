@@ -1,9 +1,10 @@
 body {
   background-image: url("./gifs/giphy.webp");
+
   /* background-color: #fff; */
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   font-family: "Nunito", sans-serif;
 }
 
