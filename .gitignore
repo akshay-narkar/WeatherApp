@@ -2,3 +2,4 @@
 .eslintrc.json
 .stylelintrc.json
 .env
+/src/key.js
