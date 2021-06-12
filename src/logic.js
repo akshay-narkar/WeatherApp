@@ -1,6 +1,7 @@
 import { nodata, displaydata, cityname } from './dom';
+/* eslint-disable */
 import key from './key';
-
+/* eslint-enable */
 const weatherdata = document.getElementById('weatherdata');
 let json1 = 0; // const random = "Akshay"; // important.. why doenst it show in console?
 
