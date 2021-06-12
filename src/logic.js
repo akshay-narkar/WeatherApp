@@ -1,6 +1,7 @@
 import { nodata, displaydata, cityname } from './dom';
 
 const key = 'API_KEY_HERE';
+//ee6f65e9ba3eb85072e21ce3e513cac0
 export const weatherdata = document.getElementById('weatherdata');
 let json1 = 0; // const random = "Akshay"; // important.. why doenst it show in console?
 
