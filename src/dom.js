@@ -21,23 +21,37 @@ const fifthtag = document.getElementById('fifthtag');
 
 const toggle = document.getElementById('flexSwitchCheckDefault');
 
-// let feels;
-// let temp;
-// let min;
-// let max;
+let feelsc;
+let tempc;
+let minc;
+let maxc;
+let feelsf;
+let tempf;
+let minf;
+let maxf;
 
-function temperatureunit() {
+function temperaturecalc(main, feels, max, min) {
+  feelsc = Math.round((feels - 273.15), 1);
+  tempc = Math.round((main - 273.15), 1);
+  minc = Math.round((min - 273.15), 1);
+  maxc = Math.round((max - 273.15), 1);
+  feelsf = Math.round((feels * 1.8 - 459.67), 1);
+  tempf = Math.round((main * 1.8 - 459.67), 1);
+  minf = Math.round((min * 1.8 - 459.67), 1);
+  maxf = Math.round((max * 1.8 - 459.67), 1);
+}
+
+function displaytemp() {
   if (toggle.checked) {
-    // console.log('akshay togged checked');
-    // temperature.textContent = `${json.main.temp}°F`;
-    // firsttag.textContent = `Max: ${json.main.temp_max}°F`;
-    // secondtag.textContent = `Min: ${json.main.temp_min}°F`;
+    temperature.textContent = `${tempf}°F`;
+    feelslike.textContent = `Feels like: ${feelsf}°F`;
+    firsttag.textContent = `Max: ${maxf}°F`;
+    secondtag.textContent = `Min: ${minf}°F`;
   } else {
-    // console.log('akshay togged unchecked');
-
-    // temperature.textContent = `${json.main.temp}°C`;
-    // firsttag.textContent = `Max: ${json.main.temp_max}°C`;
-    // secondtag.textContent = `Min: ${json.main.temp_min}°C`;
+    temperature.textContent = `${tempc}°C`;
+    feelslike.textContent = `Feels like: ${feelsc}°C`;
+    firsttag.textContent = `Max: ${maxc}°C`;
+    secondtag.textContent = `Min: ${minc}°C`;
   }
 }
 
@@ -79,17 +93,8 @@ export const displaydata = (json, jsonimage) => {
   main.textContent = json.weather[0].main;
   gifchange(json.weather[0].main);
   desc.textContent = json.weather[0].description;
-  if (toggle.checked) {
-    temperature.textContent = `${json.main.temp}°F`;
-    feelslike.textContent = `Feels like: ${json.main.feels_like}°F`;
-    firsttag.textContent = `Max: ${json.main.temp_max}°F`;
-    secondtag.textContent = `Min: ${json.main.temp_min}°F`;
-  } else {
-    temperature.textContent = `${json.main.temp}°C`;
-    feelslike.textContent = `Feels like: ${json.main.feels_like}°C`;
-    firsttag.textContent = `Max: ${json.main.temp_max}°C`;
-    secondtag.textContent = `Min: ${json.main.temp_min}°C`;
-  }
+  temperaturecalc(json.main.temp, json.main.feels_like, json.main.temp_max, json.main.temp_min);
+  displaytemp();
   thirdtag.textContent = `Humidity: ${json.main.humidity}%`;
   fourthtag.textContent = `Lat: ${json.coord.lat}°`;
   fifthtag.textContent = `Long: ${json.coord.lon}°`;
@@ -116,4 +121,4 @@ export const nodata = (message) => {
   document.body.style.backgroundImage = `url(${gif})`;
 };
 
-toggle.addEventListener('click', temperatureunit);
+toggle.addEventListener('click', displaytemp);
