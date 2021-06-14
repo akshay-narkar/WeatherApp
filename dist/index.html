@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Open Weather</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+       
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <span class="navbar-brand" aria-current="page">Open Weather</span>
+            </li>
+            </li>
+          </ul>
+          <form class="d-flex" id= "formforweather">
+            <input class="form-control me-2" type="search" placeholder="Search" id="weatherdata" aria-label="Search" required />
+            <button type="submit" class="btn btn-outline-success" id= "submitweather" >Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="container mainwrapper">
+      <div class="card carddesign text-center">
+        <h4 class="my-1" id="cityname">Enter the city name in the navbar</h4>
+        <h5 class="my-1" id="temperature"></h5>
+        <div class="text-center"> 
+          <img src="" id = "imgicon">
+        </div>
+        <div class="togglewrapper d-flex align-items-center my-1 py-1 ">
+          <h5>Celsius</h5>
+          <div class="form-check form-switch px-3 m-0">
+            <input class="form-check-input m-0" type="checkbox" id="flexSwitchCheckDefault" disabled>
+          </div>
+          <h5>Farenhite</h5>
+        </div>
+        
+        <span id="main"></span>
+        <span id="desc"></span>
+        <p id="feelslike"></p>
+        <p id="firsttag"></p>
+        <p id="secondtag"></p>
+        <p id="thirdtag"></p>
+        <p id="fourthtag"></p>
+        <p id="fifthtag"></p>
+
+      </div>
+    </div>
+  </body>
+
+  <script src="./main.js"></script>
+</html>

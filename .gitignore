@@ -1,0 +1,5 @@
+/node_modules/
+.eslintrc.json
+.stylelintrc.json
+.env
+/src/key.js
