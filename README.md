@@ -4,7 +4,7 @@ A simple web weather app that works with the open weather API, where the user ca
 
 ## OpenWeather screenshot
 
-<img src="/src/screenshot.png" width="65%"/>
+<img src="/src/screenshot.png"/>
 
 In this project we build a Weather app with vanilla javascript & webpack where you can:
 
